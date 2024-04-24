@@ -39,9 +39,19 @@ function Home() {
         </div>
         <div className='skills'>
           <h2>Compétences</h2>
+          <div className='softSkills'></div>
+          <div className='hardSkills'></div>
         </div>
         <div className='contact'>
-          <h2>Contact</h2>
+          <div className='contactForm'>
+            <h2>Contact</h2>
+            <form>
+                <label for="fname">Prénom :</label>
+                <input type="text" id="fname" name="fname"></input>
+                <label for="lname">Nom :</label>
+                <input type="text" id="lname" name="lname"></input>
+            </form>
+          </div>
         </div>
       </main>
     </div>
