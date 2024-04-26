@@ -1,0 +1,69 @@
+.projects {
+    width: 100%;
+    height: auto;
+    background-color: #F2F2F2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      width: 100%;
+      padding-bottom: 75px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .shapeBrown {
+        width: 16px;
+        height: 16px;
+        padding-right: 10px;
+      }
+
+    }
+
+    .filterMenu {
+      button {
+        width: 112px;
+        height: 32px;
+        margin-right: 20px;
+        background-color: #EEE8DD;
+        border: 0px;
+        border-radius: 8px;
+        font-size: 12px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      :first-child { //comportement temporaire pour le filtre actif
+        background-color: #BDA175;
+        font-weight: 500;
+      }
+    }
+
+    .cards {
+      width: 900px;
+      height: 480px;
+      padding: 50px;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+
+      .card {
+        background-color: #EEE8DD;
+        width: 30%;
+        max-width: 200px;
+        height: 200px;
+        margin: 20px;
+      }
+      
+      .card:hover {
+        background-color: #f3ede3;
+      }
+    }
+  }
