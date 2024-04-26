@@ -1,7 +1,7 @@
 .skills {
     .title {
       width: 100%;
-      padding-bottom: 75px;
+      padding-bottom: 50px;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -19,10 +19,30 @@
         h3 {
             font-size: 16px;
             font-weight: 500;
+            text-align:center;
         }
         .softSkills {
             p {
-                width: 200px;
+                width: 250px;
+                text-align:center;
+            }
+        }
+        .hardSkills {
+            p {
+                width: 250px;
+                text-align:center;
+            }
+            .hardSkillsIcons {
+                width: 300px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .hardSkillsIcon {
+                    width: 32px;
+                    height: 32px;
+                    padding: 30px;
+                }
             }
         }
     }
