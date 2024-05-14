@@ -8,7 +8,7 @@ import './style.scss';
 
 function Skills() {
   return (
-    <div className='skills'>
+    <div id="skills" className='skills'>
         <div className='title'>
             <img className='shapeRed' src={shapeRed}/>
             <h2>Compétences</h2>
@@ -26,11 +26,26 @@ function Skills() {
             <div className='hardSkills'>
                 <h3>Hard Skills</h3>
                 <div className='hardSkillsIcons'>
-                    <img className='hardSkillsIcon' src={htmlIcon}/>
-                    <img className='hardSkillsIcon' src={cssIcon}/>
-                    <img className='hardSkillsIcon' src={jsIcon}/>
-                    <img className='hardSkillsIcon' src={nodeJsIcon}/>
-                    <img className='hardSkillsIcon' src={reactJsIcon}/>
+                    <div className='hardSkillsIcon'>
+                        <img src={htmlIcon}/> 
+                        <p>HTML</p>
+                    </div>
+                    <div className='hardSkillsIcon'>
+                        <img src={cssIcon}/>
+                        <p>CSS</p>
+                    </div>
+                    <div className='hardSkillsIcon'>
+                        <img src={jsIcon}/>
+                        <p>Javascript</p>
+                    </div>
+                    <div className='hardSkillsIcon'>
+                        <img src={nodeJsIcon}/>
+                        <p>Nodejs</p>
+                    </div>
+                    <div className='hardSkillsIcon'>
+                        <img src={reactJsIcon}/>
+                        <p>React</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../../styles/App.scss';
+import './style.scss';
 
 function Error() {
   return (
@@ -13,4 +14,4 @@ function Error() {
   );
 }
 
-export default Error;
+export default Error; 

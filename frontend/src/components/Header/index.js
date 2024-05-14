@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import logo from '../../images/gaetan_gobin_logo.svg';
 import aboutMeIcon from '../../images/user-line1.svg';
 import projectsIcon from '../../images/code-box-line2.svg';
@@ -11,12 +12,12 @@ function Header() {
             <header className='header'>
                 <img className="logo" src={logo} alt="logo" />
                 <nav className="navbar">
-                    <img src={aboutMeIcon} /><NavLink className={({ isActive }) => isActive ? "navbar__link navbar__link--active" : "navbar__link"} to="/">A propos</NavLink>
-                    <img src={projectsIcon} /><NavLink className={({ isActive }) => isActive ? "navbar__link navbar__link--active" : "navbar__link"} to="/projects">Projets</NavLink>
-                    <img src={skillsIcon} /><NavLink className={({ isActive }) => isActive ? "navbar__link navbar__link--active" : "navbar__link"} to="/skills">Compétences</NavLink>
-                    <img src={contactIcon} /><NavLink className={({ isActive }) => isActive ? "navbar__link navbar__link--active" : "navbar__link"} to="/contact">Contact</NavLink>
+                    <HashLink className="navbar__hashLink" smooth to="#aboutMe"><img src={aboutMeIcon} /><span>A propos</span></HashLink>
+                    <HashLink className="navbar__hashLink" smooth to="#projects"><img src={projectsIcon} /><span>Projets</span></HashLink>
+                    <HashLink className="navbar__hashLink" smooth to="#skills"><img src={skillsIcon} /><span>Compétences</span></HashLink>
+                    <HashLink className="navbar__hashLink" smooth to="#contact"><img src={contactIcon} /><span>Contact</span></HashLink>
                 </nav>
-            </header>
+            </header> 
     )
 }
 

@@ -1,4 +1,5 @@
 .projects {
+    min-width: 768px;
     width: 100%;
     height: auto;
     background-color: #F2F2F2;
@@ -40,16 +41,19 @@
       :first-child { //comportement temporaire pour le filtre actif
         background-color: #BDA175;
         font-weight: 500;
+      }      
+      :last-child { //comportement temporaire pour le filtre actif
+        margin-right: 0px;
       }
     }
 
     .cards {
-      width: 900px;
-      height: 480px;
+      width: auto;
+      height: auto;
       padding: 50px;
       padding-top: 30px;
       display: flex;
-      flex-direction: row;
+      flex-direction: row; 
       flex-wrap: wrap;
       justify-content: center;
       align-items: flex-start;
@@ -61,10 +65,78 @@
         max-width: 200px;
         height: 200px;
         margin: 20px;
+        border-radius: 8px;
       }
       
       .card:hover {
         background-color: #f3ede3;
+        cursor: pointer;
+      }
+
+      .cardCover {
+        width: 200px;
+        height: 200px;
+        //margin: 50px 50px 50px 50px;
+        //padding: 20px 20px 20px 20px;
+        color: white;
+        opacity: 1;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .titleBar {
+        position: relative;
+        top: -30px;
+        width: 200px;
+        height: 24px;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+        border-radius: 0px 0px 8px 8px;
+        display: flex;
+        align-items: center;
+
+        h5 {
+          padding-left: 8px;
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }        
+      
+      .cardMask {
+        position: relative;
+        top: -230px;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: white;
+        border-radius: 8px 8px 8px 8px;
+      }
+
+      .cardMask:hover {
+        background-color: rgba(0, 0, 0, 0.0);
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .projects .cards {
+      width: 508px;
+      flex-direction: column;
+      justify-content:space-between;
+      .card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0px;
+        margin-bottom: 30px;
+      }
+      .cardCover {
+        width: 100%; 
+      }
+      .titleBar {
+        width: 100%
+      }
+      .cardMask {
+        width: 100%;
       }
     }
   }

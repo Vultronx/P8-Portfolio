@@ -10,7 +10,6 @@ const app = express();
 
 //* Importation des routes
 const projectRoutes = require('./routes/project');
-const contactRoutes = require('./routes/contact');
 const userRoutes = require('./routes/user');
 
 //* Importation de Mongoose et de Path
@@ -42,7 +41,6 @@ app.use((req, res, next) => {
 //* Définition des points d'accès
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/api/projects', projectRoutes);
-app.use('/api/contacts', contactRoutes);
 app.use('/api/auth', userRoutes);
 
 //* Exportation de l'app

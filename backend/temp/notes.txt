@@ -1,0 +1,10 @@
+"dependencies" :
+bcrypt
+dotenv
+express
+jsonwebtoken
+mongodb
+mongoose
+mongoose-unique-validator
+multer
+sharp
