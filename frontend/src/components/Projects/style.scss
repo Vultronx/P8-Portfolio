@@ -38,7 +38,7 @@
       button:hover {
         cursor: pointer;
       }
-      :first-child { //comportement temporaire pour le filtre actif
+      .selected { //comportement temporaire pour le filtre actif
         background-color: #BDA175;
         font-weight: 500;
       }      
@@ -61,7 +61,6 @@
 
       .card {
         background-color: #EEE8DD;
-        width: 30%;
         max-width: 200px;
         height: 200px;
         margin: 20px;
@@ -114,6 +113,56 @@
 
       .cardMask:hover {
         background-color: rgba(0, 0, 0, 0.0);
+      }
+    }
+  }
+
+/*   .modal {
+    display: none;
+    width: 500px;
+    height: 400px;
+    background-color: red;
+    img {
+      width: 500px;
+      height: 400px;
+      object-fit: cover;
+    }
+  } */
+
+  .modal-window {
+    display: none;
+    position: fixed;
+    top: 0px;
+    padding: 100%;
+    background-color: rgba(75, 75, 75, 0.411);
+    user-select: none;
+    img {
+      width: 500px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 6px;
+      opacity: 2;
+      position: fixed;
+      top: calc(50% - 200px);
+      left: calc(50% - 250px);
+    }
+    .close {
+      position: fixed;
+      width: 24px;
+      height: 24px;
+      z-index: 1;
+      top: calc(50% - 196px);
+      left: calc(50% + 221px);
+      background-color: rgba(197, 196, 187, 0.534);
+      border-radius: 4px;
+      cursor: pointer;
+
+      img {
+        position: fixed;
+        width: 24px;
+        height: 24px;
+        top: calc(50% - 196px);
+        left: calc(50% + 221px);
       }
     }
   }

@@ -2,14 +2,13 @@ const Contact = require('../models/contact');
 
 const fs = require('fs');
 
-exports.createContact = (req, res, next) => {
-    const contactObject = JSON.parse(req.body.contact);
-    delete contactObject._id;
-    console.log(req.body);
+exports.createContact = (req, res, next) => {  
+
     const contact = new Contact({
-        ...contactObject,
-        userId: req.auth.userId,
+      ...req.body
     });
+
+    console.log(contact);
   
     contact.save()
     .then(() => { res.status(201).json({message: 'Objet enregistré !'})})
