@@ -14,6 +14,9 @@ import jsonTest from "../../assets/logements.json";
 function Projects() {
   const [books, setBooks] = useState([]);
   const [filterBooks, setFilterBooks] = useState([]);
+  const [modalTitle, setModalTitle] = useState([]);
+  const [modalDescription, setModalDescription] = useState([]);
+  const [modalGithub, setModalGithub] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -74,11 +77,15 @@ function Projects() {
   let modal = document.getElementById("modal");
   let imgElement = document.getElementById("picture");
 
-  const showModal = (imageUrl) => {
+  const showModal = (project) => {
+    const imageUrl = project.imageUrl;
     console.log(modal.style.display);
     if (modal.style.display == "") { //pas de none !
       modal.appendChild(imgElement);
       imgElement.src = imageUrl;
+      setModalTitle(project.title);
+      setModalDescription(project.description);
+      setModalGithub(project.github);
       modal.style.display = "block";
       console.log("Affichage de la modale");
       console.log(imageUrl);
@@ -102,11 +109,11 @@ function Projects() {
             <button onClick={() => filter(3)}>SEO</button>
         </div>
         <div className='cards'>
-            {books.map(book => (
-              <div key={book.id} className='card' onClick={() => showModal(book.imageUrl)}>
-                <img className="cardCover" src={book.imageUrl}></img>           
+            {books.map(project => (
+              <div key={project.id} className='card' onClick={() => showModal(project)}>
+                <img className="cardCover" src={project.imageUrl}></img>
                 <div className="titleBar">
-                  <h5>{book.title}</h5>
+                  <h5>{project.title}</h5>
                 </div>
                 <div className="cardMask"></div>
                 {/* Affichez d'autres propriétés du livre ici */}
@@ -115,7 +122,12 @@ function Projects() {
         </div>
         <Modal>
             <div id="modal" className='modal-window'>
-              <img id='picture'/>
+              <img id='picture'/>           
+              <div className="description">
+                <h5>{modalTitle}</h5>
+                <p>{modalDescription}</p>
+                <a target="_blank" href={modalGithub}><div className='githubButton' alt="lien github">github</div></a>
+              </div>
               <div id="close" className="close"><img src={closeIcon} onClick={() => closeModal()}></img></div>
             </div>
         </Modal>

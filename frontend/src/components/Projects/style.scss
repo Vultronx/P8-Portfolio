@@ -136,15 +136,62 @@
     padding: 100%;
     background-color: rgba(75, 75, 75, 0.411);
     user-select: none;
-    img {
-      width: 500px;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 6px;
-      opacity: 2;
-      position: fixed;
-      top: calc(50% - 200px);
-      left: calc(50% - 250px);
+      img {
+        width: 500px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 6px;
+        opacity: 2;
+        position: fixed;
+        top: calc(50% - 200px);
+        left: calc(50% - 250px);
+      }    
+      .description {
+        width: 500px;
+        height: 180px;
+        background-color: rgba(0, 0, 0, 0.75);
+        position: fixed;
+        top: calc(50% + 20px);
+        left: calc(50% - 250px);
+        z-index: 1;
+        border-radius: 0px 0px 6px 6px;
+        h5 {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          text-align: left;
+          font-size: 16px;
+          font-weight: 400;
+          background-color: rgba(255, 255, 255, 0);
+          color: white;
+        }
+        p {
+          padding-left: 20px;
+          padding-right: 20px;
+          text-align: left;
+          font-size: 12px;
+          font-weight: 300;
+          background-color: rgba(255, 255, 255, 0);
+          color: white;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        .githubButton {
+          width: 62px;
+          height: 20px;
+          padding-bottom: 2px;
+          background-color: #F5390A;
+          position: fixed;
+          top: calc(50% + 20px);
+          left: calc(50% + 168px);
+          font-size: 14px;
+          border-radius: 0px 0px 6px 6px;
+          cursor: pointer;
+        }
+      }
     }
     .close {
       position: fixed;
@@ -165,7 +212,8 @@
         left: calc(50% + 221px);
       }
     }
-  }
+
+
 
   @media screen and (max-width: 900px) {
     .projects .cards {
